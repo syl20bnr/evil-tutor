@@ -28,7 +28,7 @@
 
 ;; Vimtutor adapted for Evil.
 
-;;     M-x evil-tutor/start
+;;     M-x evil-tutor-start
 
 ;; This will create a working file in `evil-tutor-working-directory' (defaults
 ;; to `~/.emacs.d/.tutor')
@@ -51,21 +51,21 @@
   "Major mode for evil-tutor.")
 
 ;;;###autoload
-(defun evil-tutor/start ()
+(defun evil-tutor-start ()
   "Start a evil-tutor session."
   (interactive)
-  (evil-tutor//restore-or-create-working-file)
+  (evil-tutor--restore-or-create-working-file)
   (evil-tutor-mode)
   (evil-mode))
 
 ;;;###autoload
-(defalias 'evil-tutor/resume 'evil-tutor/start)
+(defalias 'evil-tutor-resume 'evil-tutor-start)
 
 (set-keymap-parent evil-tutor-mode-map text-mode-map)
-(define-key evil-tutor-mode-map (kbd "C-j") 'evil-tutor/goto-next-lesson)
-(define-key evil-tutor-mode-map (kbd "C-k") 'evil-tutor/goto-previous-lesson)
+(define-key evil-tutor-mode-map (kbd "C-j") 'evil-tutor-goto-next-lesson)
+(define-key evil-tutor-mode-map (kbd "C-k") 'evil-tutor-goto-previous-lesson)
 
-(defun evil-tutor//restore-or-create-working-file ()
+(defun evil-tutor--restore-or-create-working-file ()
   "Create a new working buffer and save it in `evil-tutor-working-directory'.
 
 If a working file already exists in `evil-tutor-working-directory' then the
@@ -75,7 +75,7 @@ For now the point location is not saved but this is a functionality which can
 be handled by minor modes."
   (let* ((files (if (file-exists-p evil-tutor-working-directory)
                     (directory-files evil-tutor-working-directory t nil t)))
-         (previous-file (evil-tutor//find-first-working-file files)))
+         (previous-file (evil-tutor--find-first-working-file files)))
     (message "load: %s" (symbol-file 'evil-tutor-mode))
     (if previous-file
         (find-file-literally previous-file)
@@ -91,7 +91,7 @@ be handled by minor modes."
         (make-directory evil-tutor-working-directory 'parents)
         (save-buffer 0)))))
 
-(defun evil-tutor//find-first-working-file (files)
+(defun evil-tutor--find-first-working-file (files)
   "Return the first saved working file or nil if there is no such file.
 
 This function expects full path for each file in FILES."
@@ -102,7 +102,7 @@ This function expects full path for each file in FILES."
             (throw 'break f)))
       nil)))
 
-(defun evil-tutor/goto-next-lesson (&optional arg)
+(defun evil-tutor-goto-next-lesson (&optional arg)
   "Move the next lesson.
 
 If ARG is nil then move to the next lesson,
@@ -122,14 +122,14 @@ If ARG is negative then move the ARGth version before the current one."
     (next-line)
     (recenter-top-bottom)))
 
-(defun evil-tutor/goto-previous-lesson (&optional arg)
+(defun evil-tutor-goto-previous-lesson (&optional arg)
   "Move to the previous lession.
 
 If ARG is nil then move to the previous lesson.
 If ARG is positive then move to the ARGth lesson before the current one."
   (interactive "p")
   ;; -1 because we have to skip the current lesson
-  (evil-tutor/goto-next-lesson (- (if arg (- (abs arg)) -1) 1)))
+  (evil-tutor-goto-next-lesson (- (if arg (- (abs arg)) -1) 1)))
 
 (provide 'evil-tutor)
 

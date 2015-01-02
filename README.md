@@ -1,28 +1,59 @@
 # evil-tutor
 
-Vimtutor adapted for Evil.
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc/generate-toc again -->
+**Table of Contents**
 
-    M-x evil-tutor/start
+- [evil-tutor](#evil-tutor)
+    - [Description](#description)
+    - [Quick start](#quick-start)
+    - [Install](#install)
+        - [Package manager](#package-manager)
+        - [Manually](#manually)
+    - [Acknowledgement](#acknowledgement)
 
-This will create a working file in `evil-tutor-working-directory` (defaults
-to `~/.emacs.d/.tutor`)
+<!-- markdown-toc end -->
+
+## Description
+
+Vimtutor adapted for Evil and wrapped in a major mode.
 
 Features:
 - restore last working file
 - fast navigation between lessons with `C-j` and `C-k`
 
-This major-mode has been inspired by a [post][] on [/r/emacs][].
+## Quick start
+
+    M-x evil-tutor-start
+
+This will create a working file in `evil-tutor-working-directory` (defaults
+to `~/.emacs.d/.tutor`)
 
 ## Install
 
-The package _will be available soon_ in [MELPA][].
+### Package manager
 
-If you have MELPA in `package-archives`, use
+You can either install `evil-iedit-state` from [MELPA][] (_available soon_):
 
-    M-x package-install RET evil-tutor RET
+```
+ M-x package-install evil-tutor
+```
 
-If you don't, open `evil-tutor.el` in Emacs and call
-`package-install-from-buffer`.
+Or add it to your `Cask` file:
+
+```elisp
+(source melpa)
+
+(depends-on "evil-tutor")
+```
+
+### Manually
+
+Add `evil-tutor.el` to your load path. `evil-tutor` requires `evil` to be
+installed.
+
+## Acknowledgement
+
+This major-mode has been inspired by a [post][] on [/r/emacs][].
 
 [MELPA]: http://melpa.org/
 [/r/emacs]: http://www.reddit.com/r/emacs/
