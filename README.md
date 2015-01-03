@@ -32,7 +32,7 @@ to `~/.emacs.d/.tutor`)
 
 ### Package manager
 
-You can either install `evil-iedit-state` from [MELPA][] (_available soon_):
+You can either install `evil-tutor` from [MELPA][] (_available soon_):
 
 ```
  M-x package-install evil-tutor
