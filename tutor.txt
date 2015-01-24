@@ -10,7 +10,7 @@
      tutorial takes approximately 30 minutes.
 
      At any moment if you feel stuck, you can switch to emacs state with:
-     
+
            M-x evil-emacs-state RET
 
      Then continue the tutorial by going back to the normal state with:
@@ -406,7 +406,7 @@ Now go on to the next lesson.
   1. Remember the current line number where you are for Step 4.
 
   2. Press  G  to move you to the bottom of the buffer.
-  
+
   3. Press  gg  to move you to the beginning of the buffer.
 
   4. Type  :  and the number of the line you were on and then  <ENTER>  .This
@@ -693,7 +693,7 @@ Note: This avoids typing  i , the last character, the text to insert, <ESC>,
   This concludes the Evil Tutor. It was intended to give a brief overview of
   Emacs+Evil editor, just enough to allow you to use the editor fairly easily.
   It is far from complete as Evil has many many more commands.
-  
+
   This tutorial was written by Michael C. Pierce and Robert K. Ware,
   Colorado School of Mines using ideas supplied by Charles Smith,
   Colorado State University.  E-mail: bware@mines.colorado.edu.
