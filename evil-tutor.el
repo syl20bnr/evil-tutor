@@ -119,7 +119,7 @@ If ARG is negative then move the ARGth version before the current one."
           (re-search-forward regexp (buffer-end 1) 'noerror)
         (re-search-backward regexp (buffer-end -1) 'noerror)))
     (beginning-of-line)
-    (next-line)
+    (forward-line)
     (recenter-top-bottom)))
 
 (defun evil-tutor-goto-previous-lesson (&optional arg)
