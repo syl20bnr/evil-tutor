@@ -461,7 +461,7 @@ Note: This is very useful in debugging a program with unmatched parentheses
                       Lesson 4.4: A WAY TO CHANGE ERRORS
 
 
-           ** Type  :s/old/new/g  to substitute 'new' for 'old'. **
+           ** Type  :s/old/new/g  to substitute 'old' for 'new'. **
 
   1. Move the cursor to the line below marked --->.
 
