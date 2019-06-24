@@ -13,6 +13,7 @@
      
            M-x evil-emacs-state RET
 
+           (M-x means ALT+X, and RET means the RETURN or ENTER key (¶))
      Then continue the tutorial by going back to the normal state with:
 
            M-x evil-normal-state RET

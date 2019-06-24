@@ -14,6 +14,7 @@
 
 <!-- markdown-toc end -->
 
+## Notation: M-x means ALT+X, C-x means CTRL+X, and RET means ¶RETURN.
 ## Description
 
 Vimtutor adapted for Evil and wrapped in a major mode.
