@@ -323,7 +323,7 @@ NOTE:  For the adventurous, pressing just the object while in normal state
 --->  Whan this lime was tuoed in, someone presswd some wrojg keys!
 --->  When this line was typed in, someone pressed some wrong keys!
 
-  5. Now move on to Lesson 3.2.
+  5. Now move on to Lesson 3.3.
 
 NOTE: Remember that you should be learning by use, not memorization.
 
